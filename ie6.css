@@ -1,0 +1,48 @@
+/*********************************************************
+	HTML Elements
+ *********************************************************/
+p.smaller {
+	font-size: 1.25em;
+}
+
+/*********************************************************
+	Second-Level Navigation
+ *********************************************************/
+ 
+ul.sec-nav ul {
+	width:86%;
+}
+ul.sec-nav ul li a {
+	width:92%;
+}
+
+/*********************************************************
+	Columns
+ *********************************************************/
+
+.column_1,
+.column_2,
+.column_3,
+.column_4,
+.column_5,
+.column_6,
+.column_7,
+.column_8,
+.column_9 {
+	margin:0 8px;
+}
+
+/*********************************************************
+	Footer
+ *********************************************************/
+
+#footer{
+	background:#990000 url(images/footer-bg.png) top left repeat-x;
+	height:108px;
+	padding:0;
+	border:0;
+}
+#footerwrapper {
+	background:url(images/footer-bg.png) top left repeat-x;
+	padding:22px 0 0 0;
+}

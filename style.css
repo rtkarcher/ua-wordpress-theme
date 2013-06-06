@@ -1,0 +1,903 @@
+/*
+Theme Name: UA WordPress Theme
+Theme URI: http://etech.as.ua.edu
+Description: University of Alabama Institutional WordPress Theme. Includes custom Dashboard panel with simple tutorials to help users get started with WordPress, as well as a widgetized header and sidebar, with more widget-ready features coming soon. This theme is available for use by any official unit of The University of Alabama.
+Version: 1.0
+Author: Rainer Karcher
+Author URI: http://github.com/rtkarcher/
+Tags: university of alabama, crimson, white, grid, xhtml, multi-columns, primary and targeting navigation
+*/
+
+/*********************************************************
+	CSS Reset
+ *********************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+html, body {
+	height: 100%;
+	font: normal 100%;
+}
+
+/*********************************************************
+	Typography & Colors
+ *********************************************************/
+
+body {
+	font-family:"Lucida Sans",Lucida Sans Unicode,Verdana,Arial,sans-serif;
+	font-size:62.5%;
+	line-height:20px;
+	background:#fff url(images/header-bg.png) top left repeat-x;
+}
+p {
+	font-family: Verdana,Geneva,sans-serif;
+	line-height: 1.4em;
+	margin:0 0 15px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight:bold;
+	font-family:"Lucida Sans",Lucida Sans Unicode,Verdana,sans-serif;
+	line-height:1.1em;
+	padding:6px 0 10px 0;
+}
+h1 {
+	font-size: 2.6em;
+	padding:5px 0 20px;
+}
+h2 {
+	font-size: 2.2em;
+}
+h3 {
+	font-size: 2.0em;
+}
+h4 {
+	font-size: 1.8em;
+}
+h5 {
+	font-size: 1.7em;
+}
+h6 {
+	font-size: 1.6em;
+}
+ul, ol {
+	font-size:1.4em;
+	line-height:155%;
+	padding:5px 0 0 40px;
+	margin:0 0 15px;
+}
+table {
+	margin:0 0 15px;
+}
+table p {
+	font-family: Verdana,Geneva,sans-serif;
+	font-size:1.05em;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:155%;
+	margin:0 0 5px;
+}
+a:link, a:visited, a:active {
+	color:#900;
+	text-decoration:none;
+}
+a:hover {
+	color:#900;
+	text-decoration:underline;
+}
+a {
+  outline: none;
+}
+
+
+/*********************************************************
+	Column width/positioning
+ *********************************************************/
+ 
+#wrapper {
+	margin:0 auto;
+	width:972px;
+/*	height:100%; */
+/*	position:relative; */
+/*	border: solid blue 1px;	*/
+/*	padding-bottom:30%;	*/
+}
+
+
+#container {
+/*	border:dashed green 1px;	*/
+	position:relative;
+	float:none;
+	margin: 0 auto;
+/*	margin-left:24.5%;	*/
+/*	margin-right:24.5%;	*/
+/*	width:962px;	*/
+	width:100%;
+	max-width:962px;
+}
+
+
+#content {
+/*	width:962px;	*/
+	width:100%;
+	font-size: 1.2em;
+	padding-top:18px;
+	font-family:Verdana, sans-serif;
+/*	width:972px; */
+	position:relative;
+}
+#index-title-container {
+	height:auto;
+	padding:24px 0px 5px 0px;
+	width:inherit;
+	display:inline;
+	float: left;	
+	margin:-2px 0px 0 1px;
+	font-size:10px;
+/*	background-color:yellow; */
+}
+h1#index-title-text {
+	display:inline;
+	float:left;
+	width:inherit;
+	margin-top:-24px;
+	margin-bottom:-27px;
+}
+img#index-title-img {
+	width:inherit;
+	margin:0px 0px 15px 0px;
+	padding:28px 0px 5px 0px;
+}
+#page-title-container {
+	height:auto;
+	padding:0px 0px 20px 0px;
+	width:inherit;
+	display:inline;
+	float: left;	
+	margin:-4px 0px 0 1px;
+	font-size:10px;
+}
+h1#page-title {
+	display:inline;
+	float:left;
+	width:inherit;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.main-content {
+	float:left;
+	margin: 0 0 0;
+	padding: 0 0 56px 0px;
+	width:auto;
+	width:736px;
+	position:relative;
+/*	padding: 0 0 56px;	*/
+/*  padding-bottom:70%;	*/	
+/*	width:736px;	*/
+/*	margin-left:220px; */
+/*	background-color:red; */
+}
+.main-content .entry {
+	line-height: 1.4em;
+	float:left;
+}
+.main-content .postmetadata {
+	padding-top: 5px;
+	text-align: center;
+}
+#content_posts {
+	font-size: 1.2em;
+}
+#page {
+	padding: 1px 0px 60px 0px;
+	font-style:normal;
+	font-family:Verdana, sans-serif;
+	font-size: 1.05em;
+	float:left;		
+	width:736px;
+	line-height:155%;	
+}
+.entry {
+	margin-top:10px;
+	font-size: 1.05em;
+	width:736px;
+	line-height:155%;
+}
+.postmetadata {
+	text-align: center;
+}
+.post {
+	font-size: 1.05em;
+	width:736px;
+	line-height:155%;
+}
+
+
+/*********************************************************
+	Captions & aligment
+ *********************************************************/
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+
+/*********************************************************
+	eTech Dashboard Welcome Screen
+ *********************************************************/
+
+
+
+
+/*********************************************************
+	Header
+ *********************************************************/
+
+#header {
+/*	height:179px;
+	margin:0 auto;	*/
+	position:relative;
+	height:110px;
+	margin:0 auto;
+	background-image:url(" . get_bloginfo('template_url') . "/images/header-bg.png) top left repeat-x;
+}
+#header-banner {
+/*	border:solid yellow 1px;	*/
+	display:table;
+	position:relative;
+	height:90px;
+	width:100%;
+/*	margin-left:-8%;	*/
+}
+#nameplate{
+	background:url(images/ua-logo.png) top left no-repeat;
+	width:217px;
+	height:62px;
+	position:absolute;
+	top:28px;
+	right:10px;
+	text-indent:-9999px;
+	margin:0;
+}
+#nameplate-wide{
+	background:url(images/ua-logo-wide.png) top left no-repeat;
+	width:254px;
+	height:27px;
+	position:absolute;
+	top:-5px;
+/*	left:10px; */
+	text-indent:-9999px;
+	margin:5px 0 5px 0;
+	z-index:100;
+}
+#nameplate-large {
+	background:url(images/ua-logo-large.png) top left no-repeat;
+	width:586px;	
+	height:57px;
+	position:absolute;
+	top:38px;
+	left:6px;
+	text-indent:-9999px;
+	margin:0;
+}
+#wordmark {
+	font-family:"Lucida Sans","Lucida Sans Unicode","Lucida Grande",Verdana,Helvetica,sans-serif;
+/*	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;	*/
+	font-weight:100;
+	font-size:335%;
+	letter-spacing:6px;
+	color:#FFF;
+	text-indent:4px;
+	text-shadow:2px 2px 2px #2D2D2D;
+	line-height:40px;
+	height:80px;
+	width:70%;
+	float:left;
+	position:relative;
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+	margin:5px auto 0 -8px;
+	
+	
+	
+/*	margin-top:5px;
+	margin-right:inherit;
+*/
+}
+
+/*********************************************************
+	Main Header Navigation
+ *********************************************************/
+ 
+#main-nav { /***** Dark Gray Navigation Bar in Header *****/
+	position:absolute;
+	top:113px;
+	height:39px;
+	width:100%;
+	background-color:#333;	
+}
+
+/* ul.primary-links { */
+
+#main-nav ul {
+/*	top:113px;
+	height:39px;
+	position:absolute;
+	width:100%;
+*/	list-style:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	text-align:center;
+	height:39px;
+	overflow:hidden;
+}
+/* ul.primary-links li { */
+#main-nav ul li {
+	float:left;
+	width:12.5%;
+	height:39px;
+}
+/* ul.primary-links li a { */
+#main-nav ul li a {
+	background-color:#333;
+	color:#FFFFFF;
+	display:block;
+	font-size:15px;
+	font-weight:bold;
+	height:39px;
+	line-height:39px;
+	overflow:hidden;
+	text-decoration:none;
+}
+
+/* a:not([href^="http://web.as.ua.edu"]) {
+	outline-color:# !important;
+	outline-style: solid !important;
+	outline-width: 1px !important;
+}
+*/
+
+a:link, a:visited, a:active {
+	color:#990000;
+	text-decoration:none;
+}
+a {
+	outline-color:-moz-use-text-color;
+	outline-style:none;
+	outline-width:medium;
+}
+/* ul.primary-links li a:hover{ */
+#main-nav ul li a:hover {
+	color:#990000;
+	background-color:#fff;
+	overflow:hidden;
+}
+
+/* Default item width for primary-links is 162px */
+/* WIDTH OF ALL ITEMS MUST TOTAL NO MORE THAN 972px */
+
+
+#targ-nav { /***** Light Gray Navigation Bar in Header *****/
+	background-color:#CCCCCC;
+	position:absolute;
+	width:100%;
+	height:25px;
+	left:20%;
+	top:153px;
+}
+#targ-nav ul {
+	font-size:12px;
+	font-weight:bold;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	width:100%;
+	height:25px;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+/* #targ-nav ul.sec-links li { */
+#targ-nav ul li {
+	background:transparent url(images/targ-nav-slash.png) right center no-repeat;
+	float:left;
+}
+/* ul.sec-links li a { */
+#targ-nav ul li a {
+	background-color:#CCCCCC;
+	color:#990000;
+	line-height:25px;
+	margin-right:5px;
+	padding:0 10px 0 9px;
+	text-decoration:none;
+	text-transform:uppercase;
+	width:162px;
+	overflow:hidden;
+}
+/* ul.sec-links li a:link, a:visited, a:active { */
+#targ-nav ul li a:link, a:visited, a:active {
+	color:#990000;
+	text-decoration:none;
+}
+/* ul.sec-links li a:hover{ */
+#targ-nav ul li a:hover {
+	color:#333; 
+	text-decoration:underline;
+}
+
+
+/*********************************************************
+	Search Box
+ *********************************************************/
+
+#toolbox {
+	font-family:"Lucida Sans",Lucida Sans Unicode,Arial,Verdana,sans-serif;
+	position:absolute;
+	top:26px;
+	right:5px;
+	background-color:#820c0c;
+	border:1px solid #993333;
+	width:290px;
+	height:62px;
+}
+#toolbox ul#toolbox-links {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:1px 0px 0px 10px;
+	position:absolute;
+	padding:0px;
+}
+#toolbox ul#toolbox-links li {
+	float:left;
+}
+#toolbox ul#toolbox-links li a {
+	color:#FFFFFF;
+	display:block;
+	font-size:11px;
+	padding-top:1px;
+	text-decoration:none;
+}
+#toolbox ul#toolbox-links li a:hover{
+	text-decoration:underline;
+}
+#tool1{
+	width:63px;
+}
+#tool2{
+	width:84px;
+}
+#tool3{
+	width:71px;
+}
+#toolbox a#myBama{
+	background:url(images/mybama-logo.png) 0 0 no-repeat;
+	width:52px;
+	height:18px;
+	text-indent:-9999px;
+	float:left;
+	margin:3px 0px 0px 0px;
+}
+#toolbox form#quick-search {
+	position:absolute;
+	top:25px;
+	left:10px;
+	background-color:#FFFFFF;
+	margin:0;
+	padding:0;	
+}
+#toolbox form#quick-search input {
+	border:0;
+	width:232px;
+	margin:2px;
+	padding:2px;
+	vertical-align:middle;
+	font-size:1.4em;
+	color:#333;
+}
+#toolbox form#quick-search .qsearch-submit {
+	background:transparent url(images/search-submit.gif) 0 0 no-repeat;
+	cursor:pointer;
+	height:24px;
+	width:24px;
+	border:0;
+	font-size:0;
+    line-height:0;
+	text-indent:-9999px;
+}
+#search-results-page #quick-search input {
+	margin-top:6px;
+	width:68%;
+}
+#search-results-page form#quick-search #submit {
+	height:19px;
+	width:52px;
+	margin:auto;
+	padding:auto;
+	cursor:pointer;
+}
+p.no-search-results, ul.no-search-results {
+	font-family:inherit;
+	font-size:1.2em;
+}
+
+/*********************************************************
+	Footer
+ *********************************************************/
+ 
+#footer {
+/*	border: solid green 1px; */
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#990000 url(images/footer-bg.png) top left repeat-x scroll;
+	border-top:2px #999 solid;
+	float:left;
+/*	border:solid blue 1px;	*/
+/*	margin-top:40px;	*/
+	margin:60px 0 0 0;
+	padding:20px 0 10px 0;
+	min-width:100%;
+	height:78px;
+/*	height:56px;
+	color:#fff;	*/	
+}
+#footerwrapper {
+/*	border:solid yellow 1px; */
+	margin:0 auto;
+	height:100%;
+	width:50%;
+}
+#footer-nav {
+/*	border: solid orange 1px;	*/
+	margin:-15px auto 0 auto;
+	width:100%;
+	display:block;
+/*	width:55%;
+	float:right;
+	padding:0;
+	margin-top:-15px;
+*/
+}
+#footer-nav ul {
+	display:inline;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+#footer a {
+	color:#ffffff;
+	text-decoration:none;
+}
+#footer a:hover {
+	text-decoration:underline;
+}
+ul#footer-icon-list_left, ul#footer-icon-list_right {
+	float:left;
+	width:15%;
+	height:70px;
+	padding:0;	
+	font-family:"Lucida Sans",Lucida Sans Unicode,Verdana,Arial,sans-serif;
+	font-size:1.3em;
+	line-height:20px;
+	margin:0px 60px 0 10px;
+	list-style-position:outside;
+}
+ul#footer-icon-list_right {
+	width:20%;
+}
+ul#footer-icon-list_left li, #footer-icon-list_right li {
+	display:block;
+	width:100%;
+	height:17px;
+	margin-top:5px;
+	padding-left:30px;
+	background-repeat:no-repeat;
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+}
+ul#footer-icon-list_left li a, #footer-icon-list_right li a {
+	display:block;
+	height:17px;
+	line-height:17px;
+}
+ul#footer-icon-list_left li#foot_home{
+	background-image:url(images/icon-sprite_home.png);
+	}
+ul#footer-icon-list_left li#foot_news{
+	background-image:url(images/icon-sprite_news.png);
+	}
+ul#footer-icon-list_left li#foot_cal{
+	background-image:url(images/icon-sprite_cal.png);
+	}
+ul#footer-icon-list_right li#foot_connect{
+	background-image:url(images/icon-sprite_connect.png);
+	}
+ul#footer-icon-list_right li#foot_rss{
+	background-image:url(images/icon-sprite_rss.png);
+	}
+ul#footer-icon-list_right li#foot_email{
+	background-image:url(images/icon-sprite_email.png);
+	}
+#standard-footer-links {
+	margin:30px auto 30px auto;
+	font-size:0.75em;
+	display:inline;
+	font-family:"Lucida Sans", Verdana, sans-serif;
+	color:#ffffff;
+	height:100px;
+}
+#standard-footer-links ul#info-links {
+	margin-top:50px;
+	padding:0;
+	list-style:none;
+	direction:rtl;
+	text-align:right;
+	width:100%;
+}
+#standard-footer-links ul#info-links li {
+	padding-left:3px;
+	font-size:12px;
+	display:inline;
+}
+#standard-footer-links p#copyright {
+/*	border:solid blue 1px;	*/
+	margin:15px -50px auto auto;	
+	font-size:10.5px;
+	width:175%;
+/*	float:right; */
+	text-align:right;
+}
+	
+/*********************************************************
+    Form Styles
+ *********************************************************/
+ 
+#content form{
+	width:70%;
+	font-size:1.2em;
+}
+#content fieldset{
+	border:#333333 double 3px;
+	background-color:#eeeeee;
+	margin:10px 0;
+	padding:10px 5px;
+	clear:both;
+}
+#content legend{
+	font-size:1.4em;
+	font-weight:bold;
+	color:#990000;
+	margin-left:5px;
+}
+#content label{
+	display:block;
+	margin:2px 0 2px 10px;
+	color:#000;
+}
+#content label span{
+	color:#BC1212;
+	vertical-align:middle;
+}
+#content input, #content select, #content textarea{
+	margin:0 0 10px 10px;
+	padding:3px;
+}
+#content textarea{
+	width:75%;
+	height:85px;
+}
+#content input.submit{
+	display:block;
+	margin:5px 0 5px 10px;
+	padding:0;
+	width:75px;
+	height:30px;
+	border:0;
+	cursor:pointer;
+}
+#content input.submit:hover{
+	color:#990000;
+	border:#000 solid 1px;
+}
+#content form p{
+	font-size:1.3em;
+	padding:5px 5px 10px 5px;
+}
+
+
+/*********************************************************
+	Sidebar Navigation
+ *********************************************************/
+ 
+#sidebar {
+	width:226px;
+	display:inline;
+	margin:18px 30px 0 -30px;
+	float:left;
+	padding-top:47px;
+	position:relative;
+/*	background-color:green; */
+}
+#sidebarwrapper{
+	margin: 0 0 30px;
+	padding: 0;
+}
+ul.side-nav {
+/*	margin: 0 0 30px; */
+	margin: 0px 0 -30px 0px;
+	padding: 0;
+	font-family:"Lucida Sans",Lucida Sans Unicode,Verdana,Helvetica,sans-serif;
+	font-size:1.3em;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:175%;
+}
+
+ul.side-nav ul {
+	margin: 0px 0 -5px 0px;
+}
+
+ul.side-nav ul li {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+p.widgettitle {
+	margin-bottom:-30px;
+	font-size:xx-small;
+	display:none;
+}
+ul.side-nav ul li a {
+	width:100%;
+	display:block;
+	padding:5px 0 5px 5px; 	
+	border-top:1px #ccc dotted;
+	text-decoration:none;
+}
+ul.side-nav ul li a.noborder {
+	border-top:0px;
+}
+ul.side-nav ul li a:hover {
+	color:#fff;
+	background-color:#900;	
+	text-decoration:none;
+}
+
+/***** Nested Second-Level Sub-Navigation *****/
+
+ul.side-nav ul ul {
+	margin:0 10px;
+	padding:0 0 10px 15px;
+	line-height:130%;
+	display:block;
+	width:95%;
+}
+ul.side-nav ul ul li {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+}
+ul.side-nav ul ul li a {
+	font-size:13px;
+	font-weight:normal;
+	line-height:130%;
+	padding:4px 0 4px 4px;
+	border-top:0;
+	margin-top:0;
+}
+ul.side-nav ul ul li a:hover {
+	margin-right:20px;
+}
+
+
+
+
+/*********************************************************
+	Links Boxes
+ *********************************************************/
+.cont_col_2, .cont_col_3 {
+	float: left;
+	margin:0;
+	padding:10px 20px 0 0;
+}
+.linksbox {
+	background-color:#eee;
+	border:1px solid #ccc;
+	margin:0 0 20px 0;
+	padding:0;
+}
+.linksbox h1, .linksbox h1.gray, linksbox h1.darkgray {
+	font-size:1.4em;
+	color:#fff;
+	margin:0;
+	padding: 8px 5px 8px 12px;
+}
+.linksbox h1 {
+	background-color:#900;
+}
+.linksbox h1.gray {
+	background-color:#777;
+}
+.linksbox h1.darkgray {
+	background-color:#333;
+}
+.linksbox h1.large {
+	font-size:2.2em;
+}
+.linksbox ul {
+	font: 1.3em/140% Verdana,sans-serif;
+	padding:5px 12px 0px 25px;
+}
+.linksbox ul li {
+	padding-bottom:3px;
+}
+.linksbox ul.nobullets {
+	list-style-type:none;
+	padding:5px 5px 0px 12px;
+}
+.linksbox p {
+	padding:4px 10px 0 10px;
+}
+.linksboxright {
+	float:right;
+	width:250px;
+	margin:0 0 0 10px;
+}
+
+/******************************************************************************************************************/
+/******************************************************************************************************************/
